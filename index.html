@@ -17,6 +17,7 @@
 	<script defer src="js/bootstrap.bundle.js"></script>
 	<script defer src="js/app.js"></script>
 	<script defer src="js/validation.js"></script>
+	<script defer src="https://smtpjs.com/v3/smtp.js"></script>
 	<script src="js/swiper-bundle.min.js"></script>
 	
 	<title>Start Pilates™ | Επαγγελματικός Εξοπλισμός Pilates</title>
@@ -674,7 +675,15 @@
 			</div>
 			
 			<div class="row">
-				<form id="contact-form" class="py-5 px-4 rounded-3" method="POST">
+				<form id="contact-form" class="py-5 px-4 rounded-3">
+					
+					<!-- HoneyPot -->
+					<input type="text" name="_honey" style="display: none;">
+					<!-- Disable Captcha -->
+					<input type="hidden" name="_captcha" value="false">
+					<!-- Set Template  -->
+					<input type="hidden" name="_template" value="box">
+					
 					<h5 class="text-center fw-bold mb-4">
 						<i class="icofont-ui-message"></i> Συμπληρώστε αυτή τη φόρμα για να επικοινωνήσετε μαζί μας
 					</h5>
@@ -697,6 +706,13 @@
 					<div class="form-floating message mb-2">
 						<textarea class="form-control" placeholder="Το μήνυμά σας..." name="message"></textarea>
 						<label class="fw-bold"><i class="icofont-pencil-alt-1"></i> Το μήνυμά σας...</label>
+					</div>
+					
+					<div class="form-check mb-2">
+						<input class="form-check-input" type="checkbox" name="checkbox"/>
+						<label class="form-check-label fw-bold">
+							Αποδέχομαι τους <a class="text-reset fw-bold" data-bs-target="#privacy" data-bs-toggle="modal">Όρους Χρήσης</a>
+						</label>
 					</div>
 					
 					<div class="form-floating mb-2">
@@ -724,15 +740,8 @@
 						<label class="fw-bold selection"><i class="icofont-listine-dots"></i> Προαιρετικά - Ενδιαφέρομαι για:</label>
 					</div>
 					
-					<div class="form-check m-0">
-						<input class="form-check-input" type="checkbox" name="checkbox"/>
-						<label class="form-check-label fw-bold">
-							Συναινώ να αποθηκεύσει αυτός ο ιστότοπος τις πληροφορίες που υποβάλω.
-						</label>
-					</div>
-					
-					<small class="form-disclaimer d-inline-block mb-4 ps-4">
-						Σε καμία περίπτωση δεν θα μοιραστούμε τα προσωπικά σας στοιχεία με άλλα άτομα ή οργανισμούς
+					<small class="form-disclaimer d-block text-center mb-4">
+						Σε καμία περίπτωση δεν μοιραζόμαστε προσωπικά στοιχεία
 					</small>
 					
 					<button id="submit" class="btn btn-lg btn-outline-main-dark w-100 fw-bold text-uppercase" type="submit" value="Νέα υποβολή φόρμας">
@@ -4916,9 +4925,9 @@
 		</div>
 	</div>
 	
-	<!-- TOAST NOTIFICATION -->
+	<!-- TOAST NOTIFICATIONS -->
 	<div class="position-fixed top-50 start-50 translate-middle toast-route" >
-		<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000">
+		<div class="toast toast-error" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000">
 			<div class="toast-header pb-0">
 				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
 				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
@@ -4927,6 +4936,19 @@
 				<p class="text-center mb-1">Υπάρxουν σφάλματα στα ακόλουθα πεδία:</p>
 				<p class="errors m-0"></p>
 				<p class="m-0">Αριθμός εσφαλμένων πεδίων: <span class="error-count"></span></p>
+				<small class="time d-block fw-bold text-end"></small>
+			</div>
+		</div>
+	</div>
+	
+	<div class="position-fixed top-50 start-50 translate-middle toast-route" >
+		<div class="toast toast-success" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="7000">
+			<div class="toast-header pb-0">
+				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
+				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
+			</div>
+			<div class="toast-body">
+				<p class="text-center mb-1"><i class="icofont-send-mail"></i> H αποστολή ήταν επιτυχής</p>
 				<small class="time d-block fw-bold text-end"></small>
 			</div>
 		</div>
