@@ -1,4 +1,5 @@
 "use strict";
+
 const form = document.getElementById('contact-form');
 const formInputFields = [form.name, form.email, form.phone, form.message, form.checkbox];
 const toastError = document.querySelector('.toast-error');

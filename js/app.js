@@ -126,8 +126,6 @@ for(let i = 0; i < productSlides.length; i++) {
 	});
 }
 
-console.log(`Slides: ${productSlides.length}`);
-console.log(`Thumbs: ${productThumbs.length}`);
 
 // EVENT LISTENERS
 // Shrink navbar on document scroll event
