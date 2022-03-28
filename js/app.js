@@ -143,6 +143,3 @@ document.addEventListener('click', e => {
 	if(e.target === promoBtn) { promoBtn.parentElement.classList.toggle('show') }
 	else { promoBtn.parentElement.classList.remove('show') }
 });
-
-const allCookies = document.cookie;
-console.log(allCookies);
