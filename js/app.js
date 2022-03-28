@@ -13,8 +13,10 @@ const productSlides = document.querySelectorAll('.product-slides');
 const productThumbs = document.querySelectorAll('.product-thumbs');
 const yearPlaceholder = document.getElementById('year');
 const currYear = new Date().getFullYear();
-let visibleProducts = Array.from(productList); // Init visibleProducts with all products visible
-visibleProducts.forEach(product => product.classList.add('show')); // Make all products visible by default
+// Init visibleProducts with all products visible
+let visibleProducts = Array.from(productList);
+// Make all products visible by default
+visibleProducts.forEach(product => product.classList.add('show'));
 yearPlaceholder.textContent = currYear;
 
 // Simple function the sets the active category button
@@ -135,3 +137,12 @@ document.addEventListener('scroll', navShrink);
 navLinks.forEach(navlink => {
 	navlink.addEventListener('click', () => setTimeout(() => offcanvasInstance.hide(), 450));
 });
+
+document.addEventListener('click', e => {
+	const promoBtn = document.querySelector('.promo-btn');
+	if(e.target === promoBtn) { promoBtn.parentElement.classList.toggle('show') }
+	else { promoBtn.parentElement.classList.remove('show') }
+});
+
+const allCookies = document.cookie;
+console.log(allCookies);
