@@ -13,6 +13,8 @@ const productSlides = document.querySelectorAll('.product-slides');
 const productThumbs = document.querySelectorAll('.product-thumbs');
 const yearPlaceholder = document.getElementById('year');
 const currYear = new Date().getFullYear();
+const tooltipElements = document.querySelectorAll('a[data-bs-toggle="tooltip"]');
+tooltipElements.forEach(tooltipEl => tooltipEl = new bootstrap.Tooltip(tooltipEl));
 // Init visibleProducts with all products visible
 let visibleProducts = Array.from(productList);
 // Make all products visible by default
