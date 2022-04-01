@@ -165,58 +165,58 @@ modalsArray.forEach(productModal => {
 document.addEventListener('DOMContentLoaded', () => {
 	let modalToShow;
 
-	if(window.location.href.includes('#woodCadillacReformerHigh')) {
+	if(window.location.href.includes('#woodCadillacReformerHigh') || window.location.href.includes('%23woodCadillacReformerHigh')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacReformerHigh');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodCadillacReformerLow')) {
+	} else if(window.location.href.includes('#woodCadillacReformerLow') || window.location.href.includes('%23woodCadillacReformerLow')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacReformerLow');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodCadillacTable')) {
+	} else if(window.location.href.includes('#woodCadillacTable') || window.location.href.includes('%23woodCadillacTable')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacTable');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodReformerTower')) {
+	} else if(window.location.href.includes('#woodReformerTower') || window.location.href.includes('%23woodReformerTower')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodReformerTower');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodReformer')) {
+	} else if(window.location.href.includes('#woodReformer') || window.location.href.includes('%23woodReformer')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodReformer');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodFoldableReformer')) {
+	} else if(window.location.href.includes('#woodFoldableReformer') || window.location.href.includes('%23woodFoldableReformer')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodFoldableReformer');
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodWallTower')) {
+	} else if(window.location.href.includes('#woodWallTower') || window.location.href.includes('%23woodWallTower')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'woodWallTower');
 		modalToShow.show();
-	} else if(window.location.href.includes('#whiteCadillacReformer')) {
+	} else if(window.location.href.includes('#whiteCadillacReformer') || window.location.href.includes('%23whiteCadillacReformer')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteCadillacReformer');
 		modalToShow.show();
-	} else if(window.location.href.includes('#whiteReformerTower')) {
+	} else if(window.location.href.includes('#whiteReformerTower') || window.location.href.includes('%23whiteReformerTower')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteReformerTower');
 		modalToShow.show();
-	} else if(window.location.href.includes('#whiteReformer')) {
+	} else if(window.location.href.includes('#whiteReformer') || window.location.href.includes('%23whiteReformer')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteReformer');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryOrbit')) {
+	} else if(window.location.href.includes('#accessoryOrbit') || window.location.href.includes('%23accessoryOrbit')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryOrbit');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryArc')) {
+	} else if(window.location.href.includes('#accessoryArc') || window.location.href.includes('%23accessoryArc')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryArc');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryBox')) {
+	} else if(window.location.href.includes('#accessoryBox') || window.location.href.includes('%23accessoryBox')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryBox');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessorySpineCorrector')) {
+	} else if(window.location.href.includes('#accessorySpineCorrector') || window.location.href.includes('%23accessorySpineCorrector')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessorySpineCorrector');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessorySpineSupporter')) {
+	} else if(window.location.href.includes('#accessorySpineSupporter') || window.location.href.includes('%23accessorySpineSupporter')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessorySpineSupporter');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryLadderBarrel')) {
+	} else if(window.location.href.includes('#accessoryLadderBarrel') || window.location.href.includes('%23accessoryLadderBarrel')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryLadderBarrel');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryPilatesChair')) {
+	} else if(window.location.href.includes('#accessoryPilatesChair') || window.location.href.includes('%23accessoryPilatesChair')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryPilatesChair');
 		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryPilatesPole')) {
+	} else if(window.location.href.includes('#accessoryPilatesPole') || window.location.href.includes('%23accessoryPilatesPole')) {
 		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryPilatesPole');
 		modalToShow.show();
 	}
