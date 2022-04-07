@@ -124,20 +124,19 @@ for(let i = 0; i < productSlides.length; i++) {
 	});
 }
 
+// Push all the product modals into modalsArray
+productModals.forEach(productModal => modalsArray.push(new bootstrap.Modal(productModal)));
+
+// EVENT LISTENERS
+// Shrink navbar on document scroll event
+document.addEventListener('scroll', navShrink);
+
 // Close the offcanvas menu after 450ms on navlink click event
 navLinks.forEach(navlink => {
 	navlink.addEventListener('click', () => setTimeout(() => offcanvasInstance.hide(), 450));
 });
 
-// Push all the product modals into modalsArray
-productModals.forEach(productModal => modalsArray.push(new bootstrap.Modal(productModal)));
-
-// EVENT LISTENERS
-
-// Shrink navbar on document scroll event
-document.addEventListener('scroll', navShrink);
-
-// Logic for the promotional button about the owner
+// Creator pop-up
 document.addEventListener('click', e => {
 	const promoBtn = document.querySelector('.promo-btn');
 	if(e.target === promoBtn) { promoBtn.parentElement.classList.toggle('show') }
@@ -147,7 +146,7 @@ document.addEventListener('click', e => {
 // Add the modal hash to the URL if modal is opened
 productCards.forEach(productCard => {
 	productCard.addEventListener('click', e => {
-		const currentModalHash = e.delegateTarget.getAttribute('data-bs-target');
+		const currentModalHash = e.target.offsetParent.parentElement.getAttribute('data-bs-target');
 		window.location.hash = '#products/' + currentModalHash;
 	});
 });
@@ -161,63 +160,14 @@ modalsArray.forEach(productModal => {
 	});
 });
 
-// A way to handle external links on page load
+// Simple way to handle facebook/instagram visitors
 document.addEventListener('DOMContentLoaded', () => {
-	let modalToShow;
-
-	if(window.location.href.includes('#woodCadillacReformerHigh') || window.location.href.includes('%23woodCadillacReformerHigh')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacReformerHigh');
+	const urlHref = window.location.href;
+	if(document.referrer.includes('instagram') || document.referrer.includes('facebook')) {
+		const searchTerm = urlHref.split("#products/#")[1] || urlHref.split("#products/%23")[1];
+		const modalToShow = modalsArray.find(modal => modal._element.id === searchTerm);
 		modalToShow.show();
-	} else if(window.location.href.includes('#woodCadillacReformerLow') || window.location.href.includes('%23woodCadillacReformerLow')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacReformerLow');
-		modalToShow.show();
-	} else if(window.location.href.includes('#woodCadillacTable') || window.location.href.includes('%23woodCadillacTable')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodCadillacTable');
-		modalToShow.show();
-	} else if(window.location.href.includes('#woodReformerTower') || window.location.href.includes('%23woodReformerTower')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodReformerTower');
-		modalToShow.show();
-	} else if(window.location.href.includes('#woodReformer') || window.location.href.includes('%23woodReformer')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodReformer');
-		modalToShow.show();
-	} else if(window.location.href.includes('#woodFoldableReformer') || window.location.href.includes('%23woodFoldableReformer')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodFoldableReformer');
-		modalToShow.show();
-	} else if(window.location.href.includes('#woodWallTower') || window.location.href.includes('%23woodWallTower')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'woodWallTower');
-		modalToShow.show();
-	} else if(window.location.href.includes('#whiteCadillacReformer') || window.location.href.includes('%23whiteCadillacReformer')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteCadillacReformer');
-		modalToShow.show();
-	} else if(window.location.href.includes('#whiteReformerTower') || window.location.href.includes('%23whiteReformerTower')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteReformerTower');
-		modalToShow.show();
-	} else if(window.location.href.includes('#whiteReformer') || window.location.href.includes('%23whiteReformer')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'whiteReformer');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryOrbit') || window.location.href.includes('%23accessoryOrbit')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryOrbit');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryArc') || window.location.href.includes('%23accessoryArc')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryArc');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryBox') || window.location.href.includes('%23accessoryBox')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryBox');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessorySpineCorrector') || window.location.href.includes('%23accessorySpineCorrector')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessorySpineCorrector');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessorySpineSupporter') || window.location.href.includes('%23accessorySpineSupporter')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessorySpineSupporter');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryLadderBarrel') || window.location.href.includes('%23accessoryLadderBarrel')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryLadderBarrel');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryPilatesChair') || window.location.href.includes('%23accessoryPilatesChair')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryPilatesChair');
-		modalToShow.show();
-	} else if(window.location.href.includes('#accessoryPilatesPole') || window.location.href.includes('%23accessoryPilatesPole')) {
-		modalToShow = modalsArray.find(modal => modal._element.id === 'accessoryPilatesPole');
-		modalToShow.show();
+	} else {
+		return;
 	}
 });
