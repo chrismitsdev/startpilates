@@ -160,11 +160,12 @@ modalsArray.forEach(productModal => {
 	});
 });
 
-// Simple way to handle facebook/instagram visitors
+// Simple way to handle external linked visitors
 document.addEventListener('DOMContentLoaded', () => {
 	const urlHref = window.location.href;
-	if(document.referrer.includes('instagram') || document.referrer.includes('facebook')) {
-		const searchTerm = urlHref.split("#products/#")[1] || urlHref.split("#products/%23")[1];
+	const searchTerm = urlHref.split("#products/#")[1] || urlHref.split("#products/%23")[1];
+	
+	if(urlHref + searchTerm) {
 		const modalToShow = modalsArray.find(modal => modal._element.id === searchTerm);
 		modalToShow.show();
 	} else {
