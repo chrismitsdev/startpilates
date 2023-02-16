@@ -13,7 +13,7 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 	<link rel="manifest" href="manifest.webmanifest"/>
 	<!-- SOURCES -->
-	<link href="css/main.min.css" rel="stylesheet"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="css/custom.min.css" rel="stylesheet"/>
 	<link href="css/icofont.min.css" rel="stylesheet"/>
 	<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
@@ -429,7 +429,6 @@
 			</div>
 			
 			<div class="grid-container">
-				
 				<div class="product wood" data-bs-target="#woodCadillacReformerHigh" data-bs-toggle="modal">
 					<div class="card">
 						<img 
@@ -663,9 +662,26 @@
 						</div>
 					</div>
 				</div>
-				
 			</div>
 		
+		</div>
+
+		<div class='diagonal mt-5'>
+			<div class="container row mx-auto">
+				<div class="col d-flex flex-column align-items-center justify-content-start p-0 mb-5 mb-lg-0">
+					<i class="icofont-file-document display-1"></i>
+					<p class="text-justify my-5">
+						Θέλετε να αναβαθμίσετε την προπόνηση Pilates σας; Δείτε τον κατάλογό μας με επαγγελματικό εξοπλισμό Pilates, τώρα με μειωμένες τιμές! Ο τελευταίος μας κατάλογος περιλαμβάνει την πλήρη γκάμα εξοπλισμού Pilates υψηλής ποιότητας, συμπεριλαμβανομένων Reformers & Cadillacs, καθώς επίσης και Pilates Chairs & Barrels, όλα σε μειωμένες τιμές. Κατεβάστε τον κατάλογό μας σήμερα για να περιηγηθείτε στην μεγάλη μας ποικιλία κορυφαίας ποιότητας εξοπλισμού Pilates και αρχίστε να απολαμβάνετε τα οφέλη μιας επαγγελματικής προπόνησης από την άνεση του σπιτιού σας.
+					</p>
+					<a 
+						class="btn btn-outline-main-dark fw-bold" 
+						href="assets/catalogs/discount_catalog.pdf" 
+						download="Discount Catalog"
+					>
+						Κατεβάστε τον εκπτωτικό κατάλογο
+					</a>
+				</div>
+			</div>
 		</div>
 	</section>
 	
@@ -681,14 +697,12 @@
 			</div>
 			
 			<div class="row">
-				<form id="contact-form" class="py-5 px-4 rounded-3" novalidate>
-					
-					<!-- HoneyPot -->
-					<input type="text" name="_honey" style="display: none;"/>
-					<!-- Disable Captcha -->
-					<input type="hidden" name="_captcha" value="false"/>
-					<!-- Set Template  -->
-					<input type="hidden" name="_template" value="box"/>
+				<form 
+					id="contact-form" 
+					class="py-5 px-4 rounded-3" 
+					action="https://formspree.io/f/xeqwabpa" 
+					method="POST"
+				>
 					
 					<h5 class="text-center fw-bold mb-4">
 						<i class="icofont-ui-message"></i> Συμπληρώστε αυτή τη φόρμα για να επικοινωνήσετε μαζί μας
@@ -717,7 +731,10 @@
 					<div class="form-check mb-2">
 						<input class="form-check-input" type="checkbox" name="checkbox"/>
 						<label class="form-check-label fw-bold">
-							Αποδέχομαι τους <a class="text-reset fw-bold" data-bs-target="#privacy" data-bs-toggle="modal">Όρους Χρήσης</a>
+							Αποδέχομαι τους 
+							<a class="text-reset fw-bold" data-bs-target="#privacy" data-bs-toggle="modal">
+								Όρους Χρήσης
+							</a>
 						</label>
 					</div>
 					
@@ -743,14 +760,20 @@
 							<option>Pilates Chair</option>
 							<option>Pilates Pole</option>
 						</select>
-						<label class="fw-bold selection"><i class="icofont-listine-dots"></i> Προαιρετικά - Ενδιαφέρομαι για:</label>
+						<label class="fw-bold selection">
+							<i class="icofont-listine-dots"></i> Προαιρετικά - Ενδιαφέρομαι για:
+						</label>
 					</div>
 					
 					<small class="form-disclaimer d-block text-center mb-4">
 						Σε καμία περίπτωση δεν μοιραζόμαστε προσωπικά στοιχεία
 					</small>
 					
-					<button id="submit" class="btn btn-lg btn-outline-main-dark w-100 fw-bold text-uppercase" type="submit" value="Νέα υποβολή φόρμας">
+					<button 
+						id="submit" 
+						class="btn btn-lg btn-outline-main-dark w-100 fw-bold text-uppercase" 
+						type="submit" 
+					>
 						Υποβολη
 					</button>
 				</form>
@@ -4949,14 +4972,19 @@
 	<div class="position-fixed top-50 start-50 translate-middle">
 		<div class="toast toast-error" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="6000">
 			<div class="toast-header pb-0">
-				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
+				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark">
+					<i class="icofont-info-square"></i> Ειδοποίηση
+				</h5>
 				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
 			<div class="toast-body">
-				<p class="text-center mb-1">Υπάρxουν σφάλματα στα ακόλουθα πεδία:</p>
+				<p class="text-center mb-1">
+					Υπάρxουν σφάλματα στα ακόλουθα πεδία:
+				</p>
 				<p class="errors m-0"></p>
-				<p class="m-0">Αριθμός εσφαλμένων πεδίων: <span class="error-count"></span></p>
-				<small class="time d-block fw-bold text-end"></small>
+				<p class="m-0 mt-2">
+					Αριθμός εσφαλμένων πεδίων: <span class="error-count"></span>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -4964,12 +4992,13 @@
 	<div class="position-fixed top-50 start-50 translate-middle">
 		<div class="toast toast-success" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="6000">
 			<div class="toast-header pb-0">
-				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
+				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark">
+					<i class="icofont-info-square"></i> Ειδοποίηση
+				</h5>
 				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
 			<div class="toast-body">
 				<p class="text-center mb-1"><i class="icofont-send-mail"></i> H αποστολή ήταν επιτυχής</p>
-				<small class="time d-block fw-bold text-end"></small>
 			</div>
 		</div>
 	</div>
