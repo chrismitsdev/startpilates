@@ -1,12 +1,5 @@
 "use strict"
 
-const navbar = document.querySelector('.navbar')
-const offcanvasElement = document.querySelector('.offcanvas')
-const offcanvasInstance = new bootstrap.Offcanvas(offcanvasElement)
-const navLinks = navbar.querySelectorAll('.nav-link')
-const navBrand = navbar.querySelector('.navbar-brand')
-const navlinksOgPadding = window.getComputedStyle(navLinks[0]).getPropertyValue('padding')
-const navBrandOgPadding = window.getComputedStyle(navBrand).getPropertyValue('padding')
 const categoryButtons = Array.from(document.querySelector('.btn-group').children)
 const productCards = Array.from(document.querySelectorAll('.product'))
 const productSlides = document.querySelectorAll('.product-slides')
@@ -14,7 +7,6 @@ const productThumbs = document.querySelectorAll('.product-thumbs')
 const yearPlaceholder = document.getElementById('year')
 const currYear = new Date().getFullYear()
 const productModals = document.querySelectorAll('.product-info-modal')
-// Init visibleProducts with all products visible
 let visibleProducts = productCards
 let modalsArray = []
 
@@ -48,20 +40,6 @@ for(const categoryButton of categoryButtons) {
 		// Step 2: Add the show class in all visibleProducts array elements
 		visibleProducts.forEach(product => product.classList.add('show'))
 	})
-}
-
-const navShrink = () => {
-	if(document.documentElement.scrollTop > 100) {
-		navbar.classList.remove('py-4')
-		navbar.classList.add('scrolled')
-		navBrand.style.padding = 0
-		navLinks.forEach(navlink => navlink.style.padding = '0 8px')
-	} else {
-		navbar.classList.add('py-4')
-		navbar.classList.remove('scrolled')
-		navBrand.style.padding = navBrandOgPadding
-		navLinks.forEach(navlink => navlink.style.padding = navlinksOgPadding)
-	}
 }
 
 const swiper = new Swiper(".quality-modal-swiper", {
@@ -111,14 +89,7 @@ productModals.forEach(productModal => modalsArray.push(new bootstrap.Modal(produ
 
 // EVENT LISTENERS
 // Shrink navbar on document scroll event
-document.addEventListener('scroll', navShrink)
 
-// Close the offcanvas menu after 450ms on navlink click event
-navLinks.forEach(navlink => {
-	navlink.addEventListener('click', () => {
-		setTimeout(() => offcanvasInstance.hide(), 150)
-	})
-})
 
 // Creator pop-up
 document.addEventListener('click', e => {

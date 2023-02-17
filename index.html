@@ -15,71 +15,69 @@
 	<!-- SOURCES -->
 	<link href="css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="css/custom.min.css" rel="stylesheet"/>
+	<!--<link href="css/dev.css" rel="stylesheet"/>-->
 	<link href="css/icofont.min.css" rel="stylesheet"/>
 	<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
-	<script defer src="js/bootstrap.bundle.js"></script>
-	<script defer src="js/app.js"></script>
-	<script defer src="js/validation.js"></script>
+	<script src="js/bootstrap.bundle.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/nav.js" defer></script>
+	<script src="js/validation.js" defer></script>
 	<script src="js/swiper-bundle.min.js"></script>
 	
 	<title>Start Pilates™ | Επαγγελματικός Εξοπλισμός Pilates</title>
 </head>
 <body id="home" class="bg-main-light" data-bs-spy="scroll" data-bs-target="#navbar">
-	
-	<!-- NAVBAR -->
-	<nav id="navbar" class="navbar navbar-expand-md fixed-top py-4">
-		<div class="container">
-			
-			<a class="navbar-brand m-0" href="#home">
-				<img 
-					src="assets/logo.svg"
-					width="250"
-					alt="Start Pilates Logo" />
-			</a>
-			
-			<button 
-				class="navbar-toggler border border-main-light" 
-				type="button" 
-				data-bs-toggle="offcanvas" 
-				data-bs-target=".offcanvas">
-				<i class="icofont-navigation-menu text-main-light"></i>
-			</button>
-			
-			<div class="offcanvas offcanvas-end" data-bs-backdrop="true" tabindex="-1">
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-				</div>
-				
-				<div class="offcanvas-body">
-					<ul class="navbar-nav justify-content-lg-end align-items-center flex-grow-1">
-						<li class="nav-item mb-3 mb-sm-0 me-lg-2">
-							<a class="nav-link" aria-current="page" href="#home">
-								Αρχική
-							</a>
-						</li>
-						<li class="nav-item mb-3 mb-sm-0 mx-lg-2">
-							<a class="nav-link" href="#philosophy">
-								Φιλοσοφiα
-							</a>
-						</li>
-						<li class="nav-item mb-3 mb-sm-0 mx-lg-2">
-							<a class="nav-link" href="#products">
-								Προϊόντα
-							</a>
-						</li>
-						<li class="nav-item ms-lg-2">
-							<a class="nav-link" href="#contact">
-								Επικοινωνία
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+
+	<!-- CUSTOM NAVBAR -->
+	<header id='header' class='primary-header'>
+	<div class='wrapper flex'>
+		<img 
+			class='logo' 
+			src="assets/logo.svg" 
+			width="200" 
+			alt="Start Pilates Logo" 
+		/>
+
+		<button 
+			class='mobile-nav-toggle'
+			aria-controls='primary-navigation' 
+			aria-expanded='false'
+		>
+			<span class='sr-only'>Menu</span>
+		</button>
+
+		<nav>
+			<ul 
+				id='primary-navigation' 
+				class='primary-navigation flex'
+			>
+				<li class='active'>
+					<a class='nav-link p-0' href="#home">
+						<span aria-hidden='true'>00</span>Αρχικη
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#philosophy">
+						<span aria-hidden='true'>01</span>Φιλοσοφια
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#products">
+						<span aria-hidden='true'>02</span>Προιοντα
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#contact">
+						<span aria-hidden='true'>03</span>Επικοινωνια
+					</a>
+				</li>
+			</ul>
+		</nav>
 		</div>
-	</nav>
-	
+	</header>
+
 	<!-- CAROUSEL -->
-	<header id="header">
+	<section id="carousel">
 		<div class="carousel slide" data-bs-ride="carousel">
 			
 			<div class="carousel-inner">
@@ -287,7 +285,7 @@
 				</button>
 			</div>
 		</div>
-	</header>
+	</section>
 	
 	<!-- PHILOSOPHY -->
 	<section id="philosophy" class="py-5">
@@ -351,35 +349,21 @@
 		</div>
 	</section>
 	
-	<!-- STATEMENTS -->
-	<section id="statements" class="bg-secondary-light">
+	<!-- CATALOG -->
+	<section id="catalog" class='py-5 py-lg-5 my-lg-5'>
 		<div class="container">
-			<div class="row justify-content-between">
-				
-				<!-- First Statement -->
-				<div class="col-md-5 text-center mb-5 mb-lg-0">
-					<i class="icofont-diamond display-1"></i>
-					<h4 class="fw-bold mt-2">Ποιότητα</h4>
-					<p class="text-justify">
-						Χρησιμοποιούμε μόνο τα <span class="fw-bold">καλύτερα υλικά</span> για την κατασκευή του εξοπλισμού Pilates, όπως ξύλο οξιάς και ανοξείδωτο χάλυβα AISI 304. Όλα τα εξαρτήματα που χρησιμοποιούμε για την κατασκευή του εξοπλισμού Pilates πληρούν όλες τις ευρωπαϊκές προδιαγραφές ποιότητας.
-					</p>
-					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#quality" data-bs-toggle="modal">
-						Περισσότερα
-					</a>
-				</div>
-				
-				<!-- Second Statement -->
-				<div class="col-md-5 text-center">
-					<i class="icofont-certificate display-1"></i>
-					<h4 class="fw-bold mt-2">Εγγύηση</h4>
-					<p class="text-justify">
-						Η <span class="fw-bold">Start Pilates™</span> εγγυάται ότι όλος ο εξοπλισμός πληρεί προδιαγραφές υψηλής κατασκευαστικής ποιότητας. Η εγγύηση για όλα τα προϊόντα μας λήγει δύο 2 χρόνια από την ημερομηνία έκδοσης του τιμολογίου αγοράς και περιλαμβάνει όλα τα κομμάτια του εξοπλισμού.
-					</p>
-					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#warranty" data-bs-toggle="modal">
-						Περισσότερα
-					</a>
-				</div>
-			
+			<div class="col d-flex flex-column align-items-center justify-content-start p-0 m-0">
+				<i class="icofont-file-document display-1"></i>
+				<p class="text-justify fw-bold my-4">
+					Θέλετε να αναβαθμίσετε τον εξοπλισμό Pilates σας; Δείτε τον κατάλογό μας με επαγγελματικό εξοπλισμό Pilates! Ο τελευταίος μας κατάλογος περιλαμβάνει την πλήρη γκάμα εξοπλισμού Pilates υψηλής ποιότητας, συμπεριλαμβανομένων Reformers & Cadillacs, καθώς επίσης και Pilates Chairs & Barrels. Κατεβάστε τον κατάλογό μας σήμερα για να περιηγηθείτε στην μεγάλη μας ποικιλία κορυφαίας ποιότητας εξοπλισμού Pilates και αρχίστε να απολαμβάνετε τα οφέλη μιας επαγγελματικής προπόνησης από την άνεση του σπιτιού σας.
+				</p>
+				<a 
+					class="btn btn-outline-main-dark fw-bold" 
+					href="assets/catalogs/discount_catalog.pdf" 
+					download="Discount Catalog"
+				>
+					Κατεβάστε τον εκπτωτικό κατάλογο
+				</a>
 			</div>
 		</div>
 	</section>
@@ -665,22 +649,37 @@
 			</div>
 		
 		</div>
+	</section>
 
-		<div class='diagonal mt-5'>
-			<div class="container row mx-auto">
-				<div class="col d-flex flex-column align-items-center justify-content-start p-0 mb-5 mb-lg-0">
-					<i class="icofont-file-document display-1"></i>
-					<p class="text-justify my-5">
-						Θέλετε να αναβαθμίσετε την προπόνηση Pilates σας; Δείτε τον κατάλογό μας με επαγγελματικό εξοπλισμό Pilates, τώρα με μειωμένες τιμές! Ο τελευταίος μας κατάλογος περιλαμβάνει την πλήρη γκάμα εξοπλισμού Pilates υψηλής ποιότητας, συμπεριλαμβανομένων Reformers & Cadillacs, καθώς επίσης και Pilates Chairs & Barrels, όλα σε μειωμένες τιμές. Κατεβάστε τον κατάλογό μας σήμερα για να περιηγηθείτε στην μεγάλη μας ποικιλία κορυφαίας ποιότητας εξοπλισμού Pilates και αρχίστε να απολαμβάνετε τα οφέλη μιας επαγγελματικής προπόνησης από την άνεση του σπιτιού σας.
+		<!-- STATEMENTS -->
+	<section id="statements" class="py-5 py-lg-5 my-lg-5">
+		<div class="container">
+			<div class="row justify-content-between">
+				
+				<!-- First Statement -->
+				<div class="col-md-5 text-center mb-5 mb-lg-0">
+					<i class="icofont-diamond display-1"></i>
+					<h4 class="fw-bold mt-2">Ποιότητα</h4>
+					<p class="text-justify fw-bold">
+						Χρησιμοποιούμε μόνο τα καλύτερα υλικά για την κατασκευή του εξοπλισμού Pilates, όπως ξύλο οξιάς και ανοξείδωτο χάλυβα AISI 304. Όλα τα εξαρτήματα που χρησιμοποιούμε για την κατασκευή του εξοπλισμού Pilates πληρούν όλες τις ευρωπαϊκές προδιαγραφές ποιότητας.
 					</p>
-					<a 
-						class="btn btn-outline-main-dark fw-bold" 
-						href="assets/catalogs/discount_catalog.pdf" 
-						download="Discount Catalog"
-					>
-						Κατεβάστε τον εκπτωτικό κατάλογο
+					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#quality" data-bs-toggle="modal">
+						Περισσότερα
 					</a>
 				</div>
+				
+				<!-- Second Statement -->
+				<div class="col-md-5 text-center">
+					<i class="icofont-certificate display-1"></i>
+					<h4 class="fw-bold mt-2">Εγγύηση</h4>
+					<p class="text-justify fw-bold">
+						Η Start Pilates™ εγγυάται ότι όλος ο εξοπλισμός πληρεί προδιαγραφές υψηλής κατασκευαστικής ποιότητας. Η εγγύηση για όλα τα προϊόντα μας λήγει δύο 2 χρόνια από την ημερομηνία έκδοσης του τιμολογίου αγοράς και περιλαμβάνει όλα τα κομμάτια του εξοπλισμού.
+					</p>
+					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#warranty" data-bs-toggle="modal">
+						Περισσότερα
+					</a>
+				</div>
+			
 			</div>
 		</div>
 	</section>
