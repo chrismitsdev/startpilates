@@ -18,18 +18,33 @@ const expanded = navToggle.addEventListener('click', function() {
 
 const getHeaderStyles = function() {
   const root = document.documentElement
-  const lightnessThreshold = 80
+  const lightnessThreshold = 100
   const percentage = Math.floor(
     root.scrollTop / (carouselHeight - headerHeight) * lightnessThreshold
   )
-  if (percentage <= lightnessThreshold) {
-    header.style.backgroundColor = `hsl(0 0% 0% / ${percentage}%)`
-  } else {
+
+  if (!(percentage <= lightnessThreshold)) {
     return
   }
+
+  header.style.backgroundColor = `hsl(0 0% 0% / ${percentage}%)`
 }
 
-document.addEventListener('scroll', getHeaderStyles)
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement
+  const {type} = window.performance.getEntriesByType("navigation")[0]
+  
+  if (type === 'reload') {
+    root.scrollTop = 0 // Scroll to top
+    window.location.href = '' //  Clean the url
+  } else if (type !== 'reload' && Boolean(root.scrollTop)) {
+    header.style.backgroundColor = 'hsl(0 0% 0% / 100%)'
+  }
+
+  this.addEventListener('scroll', getHeaderStyles)
+})
+
+
 navLinks.forEach(link => link.addEventListener('mouseup', e => {
   navLinks.forEach(link => link.classList.remove('active'))
   e.currentTarget.classList.add('active')

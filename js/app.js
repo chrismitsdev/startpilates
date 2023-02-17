@@ -88,9 +88,6 @@ for(let i = 0; i < productSlides.length; i++) {
 productModals.forEach(productModal => modalsArray.push(new bootstrap.Modal(productModal)))
 
 // EVENT LISTENERS
-// Shrink navbar on document scroll event
-
-
 // Creator pop-up
 document.addEventListener('click', e => {
 	const promoBtn = document.querySelector('.promo-btn')
