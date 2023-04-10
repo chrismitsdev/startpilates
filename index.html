@@ -13,73 +13,71 @@
 	<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
 	<link rel="manifest" href="manifest.webmanifest"/>
 	<!-- SOURCES -->
-	<link href="css/main.min.css" rel="stylesheet"/>
+	<link href="css/bootstrap.min.css" rel="stylesheet"/>
 	<link href="css/custom.min.css" rel="stylesheet"/>
+	<!--<link href="css/dev.css" rel="stylesheet"/>-->
 	<link href="css/icofont.min.css" rel="stylesheet"/>
 	<link href="css/swiper-bundle.min.css" rel="stylesheet"/>
-	<script defer src="js/bootstrap.bundle.js"></script>
-	<script defer src="js/app.js"></script>
-	<script defer src="js/validation.js"></script>
+	<script src="js/bootstrap.bundle.js" defer></script>
+	<script src="js/app.js" defer></script>
+	<script src="js/nav.js" defer></script>
+	<script src="js/validation.js" defer></script>
 	<script src="js/swiper-bundle.min.js"></script>
 	
 	<title>Start Pilates™ | Επαγγελματικός Εξοπλισμός Pilates</title>
 </head>
 <body id="home" class="bg-main-light" data-bs-spy="scroll" data-bs-target="#navbar">
-	
-	<!-- NAVBAR -->
-	<nav id="navbar" class="navbar navbar-expand-md fixed-top py-4">
-		<div class="container">
-			
-			<a class="navbar-brand m-0" href="#home">
-				<img 
-					src="assets/logo.svg"
-					width="250"
-					alt="Start Pilates Logo" />
-			</a>
-			
-			<button 
-				class="navbar-toggler border border-main-light" 
-				type="button" 
-				data-bs-toggle="offcanvas" 
-				data-bs-target=".offcanvas">
-				<i class="icofont-navigation-menu text-main-light"></i>
-			</button>
-			
-			<div class="offcanvas offcanvas-end" data-bs-backdrop="true" tabindex="-1">
-				<div class="offcanvas-header">
-					<button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
-				</div>
-				
-				<div class="offcanvas-body">
-					<ul class="navbar-nav justify-content-lg-end align-items-center flex-grow-1">
-						<li class="nav-item mb-3 mb-sm-0 me-lg-2">
-							<a class="nav-link" aria-current="page" href="#home">
-								Αρχική
-							</a>
-						</li>
-						<li class="nav-item mb-3 mb-sm-0 mx-lg-2">
-							<a class="nav-link" href="#philosophy">
-								Φιλοσοφiα
-							</a>
-						</li>
-						<li class="nav-item mb-3 mb-sm-0 mx-lg-2">
-							<a class="nav-link" href="#products">
-								Προϊόντα
-							</a>
-						</li>
-						<li class="nav-item ms-lg-2">
-							<a class="nav-link" href="#contact">
-								Επικοινωνία
-							</a>
-						</li>
-					</ul>
-				</div>
-			</div>
+
+	<!-- HEADER -->
+	<header id='header' class='primary-header'>
+	<div class='wrapper flex'>
+		<img 
+			class='logo' 
+			src="assets/logo.svg" 
+			width="200" 
+			alt="Start Pilates Logo" 
+		/>
+
+		<button 
+			class='mobile-nav-toggle'
+			aria-controls='primary-navigation' 
+			aria-expanded='false'
+		>
+			<span class='sr-only'>Menu</span>
+		</button>
+
+		<nav>
+			<ul 
+				id='primary-navigation' 
+				class='primary-navigation flex'
+			>
+				<li class='active'>
+					<a class='nav-link p-0' href="#home">
+						<span aria-hidden='true'>00</span>Αρχικη
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#philosophy">
+						<span aria-hidden='true'>01</span>Φιλοσοφια
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#products">
+						<span aria-hidden='true'>02</span>Προιοντα
+					</a>
+				</li>
+				<li>
+					<a class='nav-link p-0' href="#contact">
+						<span aria-hidden='true'>03</span>Επικοινωνια
+					</a>
+				</li>
+			</ul>
+		</nav>
 		</div>
-	</nav>
-	
+	</header>
+
 	<!-- CAROUSEL -->
-	<header id="header">
+	<section id="carousel">
 		<div class="carousel slide" data-bs-ride="carousel">
 			
 			<div class="carousel-inner">
@@ -287,7 +285,7 @@
 				</button>
 			</div>
 		</div>
-	</header>
+	</section>
 	
 	<!-- PHILOSOPHY -->
 	<section id="philosophy" class="py-5">
@@ -351,35 +349,21 @@
 		</div>
 	</section>
 	
-	<!-- STATEMENTS -->
-	<section id="statements" class="bg-secondary-light">
+	<!-- CATALOG -->
+	<section id="catalog" class='py-5 py-lg-5 my-lg-5'>
 		<div class="container">
-			<div class="row justify-content-between">
-				
-				<!-- First Statement -->
-				<div class="col-md-5 text-center mb-5 mb-lg-0">
-					<i class="icofont-diamond display-1"></i>
-					<h4 class="fw-bold mt-2">Ποιότητα</h4>
-					<p class="text-justify">
-						Χρησιμοποιούμε μόνο τα <span class="fw-bold">καλύτερα υλικά</span> για την κατασκευή του εξοπλισμού Pilates, όπως ξύλο οξιάς και ανοξείδωτο χάλυβα AISI 304. Όλα τα εξαρτήματα που χρησιμοποιούμε για την κατασκευή του εξοπλισμού Pilates πληρούν όλες τις ευρωπαϊκές προδιαγραφές ποιότητας.
-					</p>
-					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#quality" data-bs-toggle="modal">
-						Περισσότερα
-					</a>
-				</div>
-				
-				<!-- Second Statement -->
-				<div class="col-md-5 text-center">
-					<i class="icofont-certificate display-1"></i>
-					<h4 class="fw-bold mt-2">Εγγύηση</h4>
-					<p class="text-justify">
-						Η <span class="fw-bold">Start Pilates™</span> εγγυάται ότι όλος ο εξοπλισμός πληρεί προδιαγραφές υψηλής κατασκευαστικής ποιότητας. Η εγγύηση για όλα τα προϊόντα μας λήγει δύο 2 χρόνια από την ημερομηνία έκδοσης του τιμολογίου αγοράς και περιλαμβάνει όλα τα κομμάτια του εξοπλισμού.
-					</p>
-					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#warranty" data-bs-toggle="modal">
-						Περισσότερα
-					</a>
-				</div>
-			
+			<div class="col d-flex flex-column align-items-center justify-content-start p-0 m-0">
+				<i class="icofont-file-document display-1"></i>
+				<p class="text-justify fw-bold my-4">
+					Θέλετε να αναβαθμίσετε τον εξοπλισμό Pilates σας; Δείτε τον κατάλογό μας με επαγγελματικό εξοπλισμό Pilates! Ο τελευταίος μας κατάλογος περιλαμβάνει την πλήρη γκάμα εξοπλισμού Pilates υψηλής ποιότητας, συμπεριλαμβανομένων Reformers & Cadillacs, καθώς επίσης και Pilates Chairs & Barrels.
+				</p>
+				<a 
+					class="btn btn-outline-main-dark fw-bold" 
+					href="assets/catalogs/discount_catalog.pdf" 
+					download="Discount Catalog"
+				>
+					Κατεβάστε τον εκπτωτικό κατάλογο
+				</a>
 			</div>
 		</div>
 	</section>
@@ -395,7 +379,8 @@
 				</p>
 			</div>
 			
-			<div class="row mb-5">
+			<!-- PRODUCT CATEGORY BUTTONS -->
+			<!--<div class="row mb-5">
 				<div class="btn-group" role="group" aria-label="Horizontal button group">
 					<button 
 						class="btn btn-outline-main-dark active" 
@@ -426,89 +411,186 @@
 						Αξεσουάρ
 					</button>
 				</div>
-			</div>
+			</div>-->
 			
 			<div class="grid-container">
-				
 				<div class="product wood" data-bs-target="#woodCadillacReformerHigh" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/wood_cadillac_reformer_high.webp" 
 							alt="Combo Cadillac Reformer (High)" />
-						<div class="card-body">
-							<p class="card-title m-0">Cadillac Reformer (High)</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Cadillac Reformer High</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€3,950</span>
+								<span class='discount fw-bold'>€2,950</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
 				<div class="product wood" data-bs-target="#woodCadillacReformerLow" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/wood_cadillac_reformer_low.webp" 
 							alt="Combo Cadillac Reformer" />
-						<div class="card-body">
-							<p class="card-title m-0">Cadillac Reformer (Low)</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Cadillac Reformer Low</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€3,950</span>
+								<span class='discount fw-bold'>€2,950</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
 				<div class="product wood" data-bs-target="#woodCadillacTable" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/wood_cadillac_table.webp" 
 							alt="Wood Cadillac Trapeze Table" />
-						<div class="card-body">
-							<p class="card-title m-0">Cadillac Table</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Cadillac Table</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€3,450</span>
+								<span class='discount fw-bold'>€2,450</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
 				<div class="product wood" data-bs-target="#woodReformerTower" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/wood_reformer_tower.webp" 
 							alt="Wood Reformer Tower" />
-						<div class="card-body">
-							<p class="card-title m-0">Reformer Tower</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Reformer Tower</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€3,350</span>
+								<span class='discount fw-bold'>€2,350</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
 				<div class="product wood" data-bs-target="#woodReformer" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/wood_reformer.webp" 
 							alt="Wood Reformer" />
-						<div class="card-body">
-							<p class="card-title m-0">Reformer</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Reformer</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€2,950</span>
+								<span class='discount fw-bold'>€1,950</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
 				<div class="product wood" data-bs-target="#woodFoldableReformer" data-bs-toggle="modal">
-					<div class="card">
+					<div class="card position-relative">
 						<img 
 							class="card-img-top"
 							loading="lazy" 
 							src="assets/images/products/product_previews/metal_reformer.webp" 
 							alt="Wood Foldable Reformer" />
-						<div class="card-body">
-							<p class="card-title m-0">Foldable Reformer</p>
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Foldable Reformer</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€2,850</span>
+								<span class='discount fw-bold'>€1,850</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
 						</div>
 					</div>
 				</div>
 				
-				<div class="product wood" data-bs-target="#woodWallTower" data-bs-toggle="modal">
+				<div class="product accessory" data-bs-target="#accessoryLadderBarrel" data-bs-toggle="modal">
+					<div class="card position-relative">
+						<img 
+							class="card-img-top"
+							loading="lazy" 
+							src="assets/images/products/product_previews/barrel.webp" 
+							alt="Ladder Barrel" />
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Ladder Barrel</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€1,900</span>
+								<span class='discount fw-bold'>€900</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
+						</div>
+					</div>
+				</div>
+				
+				<div class="product accessory" data-bs-target="#accessoryPilatesChair" data-bs-toggle="modal">
+					<div class="card position-relative">
+						<img 
+							class="card-img-top"
+							loading="lazy" 
+							src="assets/images/products/product_previews/chair.webp" 
+							alt="Pilates Chair" />
+						<div class="card-body flex-column p-2">
+							<p class="card-title">Pilates Chair</p>
+							<div class='card-price d-flex'>
+								<span class='initial me-2 text-decoration-line-through text-danger'>€1,900</span>
+								<span class='discount fw-bold'>€900</span>
+							</div>
+						</div>
+						<div 
+							style='width: 35px; height: 35px; font-size: 10px; transform: rotate(20deg); top: 5px; right: 5px;' 
+							class='position-absolute d-flex align-items-center justify-content-center bg-danger rounded-circle fw-bold text-white'>
+							<span>SALE</span>
+						</div>
+					</div>
+				</div>
+
+								<!--<div class="product wood" data-bs-target="#woodWallTower" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -519,9 +601,9 @@
 							<p class="card-title m-0">Wall Tower</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product white" data-bs-target="#whiteCadillacReformer" data-bs-toggle="modal">
+				<!--<div class="product white" data-bs-target="#whiteCadillacReformer" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -532,9 +614,9 @@
 							<p class="card-title m-0">Cadillac Reformer (Λευκό)</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product white" data-bs-target="#whiteReformerTower" data-bs-toggle="modal">
+				<!--<div class="product white" data-bs-target="#whiteReformerTower" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -545,9 +627,9 @@
 							<p class="card-title m-0">Reformer Tower (Λευκό)</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product white" data-bs-target="#whiteReformer" data-bs-toggle="modal">
+				<!--<div class="product white" data-bs-target="#whiteReformer" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -558,9 +640,9 @@
 							<p class="card-title m-0">Reformer (Λευκό)</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessoryOrbit" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessoryOrbit" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -571,9 +653,9 @@
 							<p class="card-title m-0">Pilates Orbit</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessoryArc" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessoryArc" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -584,9 +666,9 @@
 							<p class="card-title m-0">Pilates Arc</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessoryBox" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessoryBox" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -597,9 +679,9 @@
 							<p class="card-title m-0">Orthopedic Box</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessorySpineCorrector" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessorySpineCorrector" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -610,9 +692,9 @@
 							<p class="card-title m-0">Spine Corrector</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessorySpineSupporter" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessorySpineSupporter" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -623,35 +705,9 @@
 							<p class="card-title m-0">Spine Supporter</p>
 						</div>
 					</div>
-				</div>
+				</div>-->
 				
-				<div class="product accessory" data-bs-target="#accessoryLadderBarrel" data-bs-toggle="modal">
-					<div class="card">
-						<img 
-							class="card-img-top"
-							loading="lazy" 
-							src="assets/images/products/product_previews/barrel.webp" 
-							alt="Ladder Barrel" />
-						<div class="card-body">
-							<p class="card-title m-0">Ladder Barrel</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="product accessory" data-bs-target="#accessoryPilatesChair" data-bs-toggle="modal">
-					<div class="card">
-						<img 
-							class="card-img-top"
-							loading="lazy" 
-							src="assets/images/products/product_previews/chair.webp" 
-							alt="Pilates Chair" />
-						<div class="card-body">
-							<p class="card-title m-0">Pilates Chair</p>
-						</div>
-					</div>
-				</div>
-				
-				<div class="product accessory" data-bs-target="#accessoryPilatesPole" data-bs-toggle="modal">
+				<!--<div class="product accessory" data-bs-target="#accessoryPilatesPole" data-bs-toggle="modal">
 					<div class="card">
 						<img 
 							class="card-img-top"
@@ -662,10 +718,42 @@
 							<p class="card-title m-0">Pilates Pole</p>
 						</div>
 					</div>
-				</div>
-				
+				</div>-->
 			</div>
 		
+		</div>
+	</section>
+
+	<!-- STATEMENTS -->
+	<section id="statements" class="py-5 py-lg-5 my-lg-5">
+		<div class="container">
+			<div class="row justify-content-between">
+				
+				<!-- First Statement -->
+				<div class="col-md-5 text-center mb-5 mb-lg-0">
+					<i class="icofont-diamond display-1"></i>
+					<h4 class="fw-bold mt-2">Ποιότητα</h4>
+					<p class="text-justify fw-bold">
+						Χρησιμοποιούμε μόνο τα καλύτερα υλικά για την κατασκευή του εξοπλισμού Pilates, όπως ξύλο οξιάς και ανοξείδωτο χάλυβα AISI 304. Όλα τα εξαρτήματα που χρησιμοποιούμε για την κατασκευή του εξοπλισμού Pilates πληρούν όλες τις ευρωπαϊκές προδιαγραφές ποιότητας.
+					</p>
+					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#quality" data-bs-toggle="modal">
+						Περισσότερα
+					</a>
+				</div>
+				
+				<!-- Second Statement -->
+				<div class="col-md-5 text-center">
+					<i class="icofont-certificate display-1"></i>
+					<h4 class="fw-bold mt-2">Εγγύηση</h4>
+					<p class="text-justify fw-bold">
+						Η Start Pilates™ εγγυάται ότι όλος ο εξοπλισμός πληρεί προδιαγραφές υψηλής κατασκευαστικής ποιότητας. Η εγγύηση για όλα τα προϊόντα μας λήγει δύο 2 χρόνια από την ημερομηνία έκδοσης του τιμολογίου αγοράς και περιλαμβάνει όλα τα κομμάτια του εξοπλισμού.
+					</p>
+					<a class="btn btn-outline-main-dark fw-bold" data-bs-target="#warranty" data-bs-toggle="modal">
+						Περισσότερα
+					</a>
+				</div>
+			
+			</div>
 		</div>
 	</section>
 	
@@ -681,14 +769,12 @@
 			</div>
 			
 			<div class="row">
-				<form id="contact-form" class="py-5 px-4 rounded-3" novalidate>
-					
-					<!-- HoneyPot -->
-					<input type="text" name="_honey" style="display: none;"/>
-					<!-- Disable Captcha -->
-					<input type="hidden" name="_captcha" value="false"/>
-					<!-- Set Template  -->
-					<input type="hidden" name="_template" value="box"/>
+				<form 
+					id="contact-form" 
+					class="py-5 px-4 rounded-3" 
+					action="https://formspree.io/f/xeqwabpa" 
+					method="POST"
+				>
 					
 					<h5 class="text-center fw-bold mb-4">
 						<i class="icofont-ui-message"></i> Συμπληρώστε αυτή τη φόρμα για να επικοινωνήσετε μαζί μας
@@ -717,7 +803,10 @@
 					<div class="form-check mb-2">
 						<input class="form-check-input" type="checkbox" name="checkbox"/>
 						<label class="form-check-label fw-bold">
-							Αποδέχομαι τους <a class="text-reset fw-bold" data-bs-target="#privacy" data-bs-toggle="modal">Όρους Χρήσης</a>
+							Αποδέχομαι τους 
+							<a class="text-reset fw-bold" data-bs-target="#privacy" data-bs-toggle="modal">
+								Όρους Χρήσης
+							</a>
 						</label>
 					</div>
 					
@@ -743,14 +832,20 @@
 							<option>Pilates Chair</option>
 							<option>Pilates Pole</option>
 						</select>
-						<label class="fw-bold selection"><i class="icofont-listine-dots"></i> Προαιρετικά - Ενδιαφέρομαι για:</label>
+						<label class="fw-bold selection">
+							<i class="icofont-listine-dots"></i> Προαιρετικά - Ενδιαφέρομαι για:
+						</label>
 					</div>
 					
 					<small class="form-disclaimer d-block text-center mb-4">
 						Σε καμία περίπτωση δεν μοιραζόμαστε προσωπικά στοιχεία
 					</small>
 					
-					<button id="submit" class="btn btn-lg btn-outline-main-dark w-100 fw-bold text-uppercase" type="submit" value="Νέα υποβολή φόρμας">
+					<button 
+						id="submit" 
+						class="btn btn-lg btn-outline-main-dark w-100 fw-bold text-uppercase" 
+						type="submit" 
+					>
 						Υποβολη
 					</button>
 				</form>
@@ -870,10 +965,13 @@
 	</footer>
 	
 	
-	<!-- -------------------------------------------- -->
-	<!-- -------------------MODALS------------------- -->
-	<!-- -------------------------------------------- -->
-	<!-- STATEMENT MODALS -->
+	<!-- ------------------ MODALS ------------------ -->
+	<!-- @@@ STATEMENT MODALS @@@ -->
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@@ -->
+
+	<!-- ------- -->
+	<!-- WARRANY -->
+	<!-- ------- -->
 	<div id="warranty" class="modal fade warranty-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-xl">
 			<div class="modal-content">
@@ -913,6 +1011,9 @@
 		</div>
 	</div>
 	
+	<!-- ------- -->
+	<!-- QUALITY -->
+	<!-- ------- -->
 	<div id="quality" class="modal fade quality-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-xl">
 			<div class="modal-content">
@@ -985,7 +1086,12 @@
 		</div>
 	</div>
 	
-	<!-- BROCHURE MODALS -->
+	<!-- @@@ BROCHURE MODALS @@@ -->
+	<!-- @@@@@@@@@@@@@@@@@@@@@@@ -->
+
+	<!-- ------- -->
+	<!-- COOKIES -->
+	<!-- ------- -->
 	<div id="cookies" class="modal fade cookies-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-xl">
 			<div class="modal-content">
@@ -1008,6 +1114,9 @@
 		</div>
 	</div>
 	
+	<!-- ------- -->
+	<!-- PRIVACY -->
+	<!-- ------- -->
 	<div id="privacy" class="modal fade privacy-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-dialog-scrollable modal-xl">
 			<div class="modal-content">
@@ -1043,9 +1152,10 @@
 		</div>
 	</div>
 	
-	
-	
-	<!-- --PRODUCT MODALS-- -->
+	<!-- @@@ PRODUCT MODALS @@@ -->
+	<!-- @@@@@@@@@@@@@@@@@@@@@@ -->
+
+	<!-- ------------------ -->
 	<!-- WOOD REFORMER HIGH -->
 	<!-- ------------------ -->
 	<div id="woodCadillacReformerHigh" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
@@ -1284,12 +1394,12 @@
 								<ul class="nav nav-tabs nav-justified" role="tablist">
 									<li class="nav-item me-2">
 										<button class="nav-link active" data-bs-target="#description-reformer-high" data-bs-toggle="tab" type="button">
-											Περιγραφή
+											Περιγραφη
 										</button>
 									</li>
 									<li class="nav-item">
 										<button class="nav-link" data-bs-target="#specifications-reformer-high" data-bs-toggle="tab" type="button">
-											Χαρακτηριστικά
+											Χαρακτηριστικα
 										</button>
 									</li>
 								</ul>
@@ -1297,15 +1407,22 @@
 								<div class="tab-content mt-3">
 									<div id="description-reformer-high" class="tab-pane fade show active" role="tabpanel">
 										
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 122 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€3,950
+												</span>
+												<span class='discount fw-bold'>€2,950</span> 
 											</li>
 										</ul>
 										
@@ -1695,15 +1812,22 @@
 								
 								<div class="tab-content mt-3">
 									<div id="description-reformer-low" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 122 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€3,950
+												</span>
+												<span class='discount fw-bold'>€2,950</span> 
 											</li>
 										</ul>
 										
@@ -1925,15 +2049,22 @@
 								
 								<div class="tab-content mt-3">
 									<div id="description-cadillac-table" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 98 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€3,450
+												</span>
+												<span class='discount fw-bold'>€2,450</span> 
 											</li>
 										</ul>
 										
@@ -2021,9 +2152,8 @@
 		</div>
 	</div>
 
-	
 	<!-- -------------------- -->
-	<!-- WOOD REFORMER TOWER -->
+	<!-- WOOD REFORMER TOWER  -->
 	<!-- -------------------- -->
 	<div id="woodReformerTower" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
@@ -2257,15 +2387,22 @@
 								
 								<div class="tab-content mt-3">
 									<div id="description-reformer-tower" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 92.5 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€3,350
+												</span>
+												<span class='discount fw-bold'>€2,350</span> 
 											</li>
 										</ul>
 										
@@ -2367,7 +2504,6 @@
 			</div>
 		</div>
 	</div>
-	
 	
 	<!-- -------------------- -->
 	<!--    WOOD REFORMER     -->
@@ -2568,15 +2704,22 @@
 								
 								<div class="tab-content mt-3">
 									<div id="description-reformer" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 72 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€2,950
+												</span>
+												<span class='discount fw-bold'>€1,950</span> 
 											</li>
 										</ul>
 										
@@ -2665,7 +2808,6 @@
 			</div>
 		</div>
 	</div>
-	
 	
 	<!-- ---------------------- -->
 	<!-- WOOD FOLDABLE REFORMER -->
@@ -2854,15 +2996,22 @@
 								
 								<div class="tab-content mt-3">
 									<div id="description-foldable" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
 											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 55 kg
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€2,850
+												</span>
+												<span class='discount fw-bold'>€1,850</span> 
 											</li>
 										</ul>
 										
@@ -2927,12 +3076,376 @@
 			</div>
 		</div>
 	</div>
-	
+
+	<!-- ----------------------- -->
+	<!-- ACCESSORY PILATES CHAIR -->
+	<!-- ----------------------- -->
+	<div id="accessoryPilatesChair" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Pilates Chair</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						
+						<div class="row">
+							
+							<div class="col-md-5">
+								
+								<div class="swiper product-slides">
+									
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/1.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/2.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/3.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/4.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/5.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+									</div>
+									
+									<div class="swiper-button-prev">
+										<i class="icofont-curved-left display-4 text-main-dark"></i>
+									</div>
+									
+									<div class="swiper-button-next">
+										<i class="icofont-curved-right display-4 text-main-dark"></i>
+									</div>
+									
+								</div>
+								
+								<div class="product-thumbs mt-3 mb-3 mb-md-0">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/thumb1.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/thumb2.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/thumb3.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/thumb4.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/pilates_chair/thumb5.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="col-md-7">
+								
+								<ul class="nav nav-tabs nav-justified" role="tablist">
+									<li class="nav-item me-2">
+										<button class="nav-link active" data-bs-target="#description-accessory-pilates-chair" data-bs-toggle="tab" type="button">
+											Περιγραφή
+										</button>
+									</li>
+									<li class="nav-item">
+										<button class="nav-link" data-bs-target="#specifications-accessory-pilates-chair" data-bs-toggle="tab" type="button">
+											Χαρακτηριστικά
+										</button>
+									</li>
+								</ul>
+								
+								<div class="tab-content mt-3">
+									<div id="description-accessory-pilates-chair" class="tab-pane fade show active" role="tabpanel">
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€1,900
+												</span>
+												<span class='discount fw-bold'>€900</span> 
+											</li>
+										</ul>
+										
+										<p class="text-justify">
+											Η <span class="fw-bold">Pilates Chair</span> είναι χρήσιμη για όλους τους μύες του κορμιού, και βελτιώνει τη συνολική σταθεροποίηση και δύναμη του σώματος. Επίσης, χρησιμοποιείται για την αποκατάσταση της κακής στάσης και της μυϊκής ανισορροπίας από επαγγελματίες και αρχάριους. Ο συμπαγής, φορητός σχεδιασμός της, επιτρέπει τη χρήση της σε διάφορα μέρη. Η <span class="fw-bold">Pilates Chair</span> παρέχει ομαλές μεταβάσεις μεταξύ των ρυθμίσεων αντίστασης της. Οι ρυθμιζόμενες λαβές της έχουν αντιολισθητική επένδυση.
+										</p>
+										
+										<dl>
+											<dt class="mb-1 fs-5">ΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ:</dt>
+											<dd class="m-0">Αντιβακτηριδιακό δερμάτινο κάλυμμα</dd>
+											<dd class="m-0">Ορθοπεδικό μαξιλάρι για άνεση</dd>
+											<dd class="m-0 d-flex align-items-center">
+												<span class="badge bg-secondary-light text-main-dark rounded-pill me-1">2</span>Βραχίονες
+											</dd>
+											<dl class="m-0">
+												<dt class="m-0">Ελατήρια:</dt>
+												<dd class="m-0 d-flex align-items-center"><span class="badge bg-warning text-main-dark rounded-pill me-1">2</span>Κίτρινο</dd>
+												<dd class="m-0 d-flex align-items-center"><span class="badge bg-main-dark text-main-light rounded-pill me-1">2</span>Μαύρo</dd>
+											</dl>
+										</dl>
+										
+										<ul class="list-group mt-lg-3">
+											<li class="list-group-item w-100">
+												<p class="m-0 fw-bold text-center">
+													Κατεβάστε τον ψηφιακό κατάλογο
+												</p>
+											</li>
+											<li class="list-group-item w-100">
+												<a class="btn btn-main-dark w-100" href="assets/catalogs/pilates_chair.pdf" download="Pilates Chair">
+													<i class="icofont-ui-file"></i> Pilates Chair
+												</a>
+											</li>
+										</ul>
+									</div>
+									
+									<div id="specifications-accessory-pilates-chair" class="tab-pane fade" role="tabpanel">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<h5 class="m-0 fw-bold">Πλαίσιο</h5>
+											</li>
+											<li class="list-group-item">Πλάτος: 64 cm</li>
+											<li class="list-group-item">Μήκος: 76 cm</li>
+											<li class="list-group-item">Ύψος: 68 cm</li>
+										</ul>
+										
+										<ul class="list-group mt-3">
+											<li class="list-group-item">
+												<h5 class="m-0 fw-bold">Κάθισμα</h5>
+											</li>
+											<li class="list-group-item">Πλάτος: 54 cm</li>
+											<li class="list-group-item">Μήκος: 34 cm</li>
+											<li class="list-group-item">Ύψος: 5 cm</li>
+										</ul>
+										
+										<ul class="list-group mt-3">
+											<li class="list-group-item">Βάρος: 34.5 kg</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- ----------------------- -->
+	<!-- ACCESSORY LADDER BARREL -->
+	<!-- ----------------------- -->
+	<div id="accessoryLadderBarrel" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+		<div class="modal-dialog modal-fullscreen">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title">Ladder Barrel</h5>
+					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+				</div>
+				<div class="modal-body">
+					<div class="container">
+						
+						<div class="row">
+							
+							<div class="col-md-5">
+								
+								<div class="swiper product-slides">
+									
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/ladder_barrel/1.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img
+												class="img-fluid rounded-3 swiper-lazy" 
+												data-src="assets/images/products/Accessories/ladder_barrel/2.webp"/>
+											<div class="spinner-border text-main-dark"></div>
+										</div>
+									</div>
+									
+									<div class="swiper-button-prev">
+										<i class="icofont-curved-left display-4 text-main-dark"></i>
+									</div>
+									
+									<div class="swiper-button-next">
+										<i class="icofont-curved-right display-4 text-main-dark"></i>
+									</div>
+									
+								</div>
+								
+								<div class="product-thumbs mt-3 mb-3 mb-md-0">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/ladder_barrel/thumb1.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+										<div class="swiper-slide">
+											<img 
+												class="rounded-1 swiper-lazy" 
+												data-src="assets/images/products/Accessories/ladder_barrel/thumb2.webp" />
+												<div class="spinner-border spinner-border-sm text-main-dark"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						
+							<div class="col-md-7">
+								
+								<ul class="nav nav-tabs nav-justified" role="tablist">
+									<li class="nav-item me-2">
+										<button class="nav-link active" data-bs-target="#description-accessory-ladder-barrel" data-bs-toggle="tab" type="button">
+											Περιγραφή
+										</button>
+									</li>
+									<li class="nav-item">
+										<button class="nav-link" data-bs-target="#specifications-accessory-ladder-barrel" data-bs-toggle="tab" type="button">
+											Χαρακτηριστικά
+										</button>
+									</li>
+								</ul>
+								
+								<div class="tab-content mt-3">
+									<div id="description-accessory-ladder-barrel" class="tab-pane fade show active" role="tabpanel">
+										<ul class="list-group mb-2">
+											<li class="list-group-item">
+												<i class="icofont-delivery-time fs-5"></i> Παράδοση: 20-30 Ημέρες
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-certificate fs-5"></i> Εγγύηση: 2 Χρόνια
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-box fs-5"></i> Βάρος: 122 kg
+											</li>
+											<li class="list-group-item">
+												<i class="icofont-price fs-5"></i> Τιμή:
+												<span class='initial me-1 text-decoration-line-through text-danger fs-6'>
+													€1,900
+												</span>
+												<span class='discount fw-bold'>€900</span> 
+											</li>
+										</ul>
+										
+										<p class="text-justify">
+											Το <span class="fw-bold">Ladder Barrel της Start Pilates™</span> εστιάζει στη λειτουργικότητα και διαθέτει καμπυλωτό σχεδιασμό για ασκήσεις πυρήνα, σταθεροποίησης και διατάσεων για αρχάριους  αλλά και προχωρημένους. Ομαλή συρόμενη βάση 15 cm της σκάλας παρέχει εξοικονόμηση χώρου και διευρύνει τα όρια της άσκησης. Το ορθοπεδικό μαξιλαράκι είναι κυρτό για άνεση και στήριξη. To <span class="fw-bold">Ladder Barrel</span> είναι ένα από τα γνωστά και διαχρονικά όργανα γυμναστικής της μεθόδου Pilates, που εμπνεύστηκε ο Joseph Pilates. Aποτελείται από ένα ξύλινο πολύζυγο από ξύλο οξιάς κι ένα βαρέλι ξύλινης κατασκευής. Το ορθοπεδικό μαξιλάρι υψηλής πυκνότητας από υλικό EVA παρέχει άνεση και στήριξη στις ασκήσεις. Το μεγάλο εύρος κίνησης του βαρελιού προσφέρει εξατομίκευση στην ανάγκες του ασκούμενου.
+										</p>
+										
+										<dl>
+											<dt class="mb-1 fs-5">ΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ:</dt>
+											<dd class="m-0">Αντιβακτηριδιακό δερμάτινο κάλυμμα</dd>
+											<dd class="m-0">Ορθοπεδικό μαξιλάρι στον κύλινδρο για άνεση</dd>
+											<dd class="m-0">Κρυφές βίδες για αισθητική εμφάνιση</dd>
+											<dd class="m-0 d-flex align-items-center">
+												<span class="badge bg-secondary-light text-main-dark rounded-pill me-1">4</span> Στηρίγματά ράγας
+											</dd>
+										</dl>
+										
+										<ul class="list-group mt-lg-3">
+											<li class="list-group-item w-100">
+												<p class="m-0 fw-bold text-center">
+													Κατεβάστε τον ψηφιακό κατάλογο
+												</p>
+											</li>
+											<li class="list-group-item w-100">
+												<a class="btn btn-main-dark w-100" href="assets/catalogs/ladder_barrel.pdf" download="Ladder Barrel">
+													<i class="icofont-ui-file"></i> Ladder Barrel
+												</a>
+											</li>
+										</ul>
+									</div>
+									
+									<div id="specifications-accessory-ladder-barrel" class="tab-pane fade" role="tabpanel">
+										<ul class="list-group">
+											<li class="list-group-item">
+												<h5 class="m-0 fw-bold">Διαστάσεις</h5>
+											</li>
+											<li class="list-group-item">Μήκος: 120 cm</li>
+										</ul>
+										
+										<ul class="list-group mt-3">
+											<li class="list-group-item">
+												<h5 class="m-0 fw-bold">Ladder</h5>
+											</li>
+											<li class="list-group-item">Πλάτος: 64 cm</li>
+											<li class="list-group-item">Ύψος: 94.5 cm</li>
+										</ul>
+										
+										<ul class="list-group mt-3">
+											<li class="list-group-item">
+												<h5 class="m-0 fw-bold">Barrel</h5>
+											</li>
+											<li class="list-group-item">Πλάτος: 64 cm</li>
+											<li class="list-group-item">Ύψος: 88 cm</li>
+										</ul>
+										
+										<ul class="list-group mt-3">
+											<li class="list-group-item">Βάρος: 40 kg</li>
+										</ul>
+									</div>
+								</div>
+								
+							</div>
+						</div>
+					
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
 	
 	<!-- --------------- -->
 	<!-- WOOD WALL TOWER -->
 	<!-- --------------- -->
-	<div id="woodWallTower" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="woodWallTower" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -3099,13 +3612,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+	</div>-->
 	
 	<!-- ----------------------- -->
 	<!-- WHITE CADILLAC REFORMER -->
 	<!-- ----------------------- -->
-	<div id="whiteCadillacReformer" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="whiteCadillacReformer" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -3354,13 +3866,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+	</div>-->
 	
 	<!-- -------------------- -->
 	<!-- WHITE REFORMER TOWER -->
 	<!-- -------------------- -->
-	<div id="whiteReformerTower" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="whiteReformerTower" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -3605,13 +4116,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+	</div>-->
 	
 	<!-- -------------- -->
 	<!-- WHITE REFORMER -->
 	<!-- -------------- -->
-	<div id="whiteReformer" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="whiteReformer" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -3843,12 +4353,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- --------------- -->
 	<!-- ACCESSORY ORBIT -->
 	<!-- --------------- -->
-	<div id="accessoryOrbit" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessoryOrbit" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -3976,13 +4486,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
+	</div>-->
 	
 	<!-- ------------- -->
 	<!-- ACCESSORY ARC -->
 	<!-- ------------- -->
-	<div id="accessoryArc" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessoryArc" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -4099,12 +4608,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- ------------- -->
 	<!-- ACCESSORY BOX -->
 	<!-- ------------- -->
-	<div id="accessoryBox" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessoryBox" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -4232,12 +4741,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- ------------------------- -->
 	<!-- ACCESSORY SPINE CORRECTOR -->
 	<!-- ------------------------- -->
-	<div id="accessorySpineCorrector" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessorySpineCorrector" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -4370,12 +4879,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- ------------------------- -->
 	<!-- ACCESSORY SPINE SUPPORTER -->
 	<!-- ------------------------- -->
-	<div id="accessorySpineSupporter" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessorySpineSupporter" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -4491,363 +5000,12 @@
 				</div>
 			</div>
 		</div>
-	</div>
-	
-	<!-- ----------------------- -->
-	<!-- ACCESSORY LADDER BARREL -->
-	<!-- ----------------------- -->
-	<div id="accessoryLadderBarrel" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-fullscreen">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Ladder Barrel</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						
-						<div class="row">
-							
-							<div class="col-md-5">
-								
-								<div class="swiper product-slides">
-									
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/ladder_barrel/1.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/ladder_barrel/2.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-									</div>
-									
-									<div class="swiper-button-prev">
-										<i class="icofont-curved-left display-4 text-main-dark"></i>
-									</div>
-									
-									<div class="swiper-button-next">
-										<i class="icofont-curved-right display-4 text-main-dark"></i>
-									</div>
-									
-								</div>
-								
-								<div class="product-thumbs mt-3 mb-3 mb-md-0">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/ladder_barrel/thumb1.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/ladder_barrel/thumb2.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-7">
-								
-								<ul class="nav nav-tabs nav-justified" role="tablist">
-									<li class="nav-item me-2">
-										<button class="nav-link active" data-bs-target="#description-accessory-ladder-barrel" data-bs-toggle="tab" type="button">
-											Περιγραφή
-										</button>
-									</li>
-									<li class="nav-item">
-										<button class="nav-link" data-bs-target="#specifications-accessory-ladder-barrel" data-bs-toggle="tab" type="button">
-											Χαρακτηριστικά
-										</button>
-									</li>
-								</ul>
-								
-								<div class="tab-content mt-3">
-									<div id="description-accessory-ladder-barrel" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
-											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
-											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 40 kg
-											</li>
-										</ul>
-										
-										<p class="text-justify">
-											Το <span class="fw-bold">Ladder Barrel της Start Pilates™</span> εστιάζει στη λειτουργικότητα και διαθέτει καμπυλωτό σχεδιασμό για ασκήσεις πυρήνα, σταθεροποίησης και διατάσεων για αρχάριους  αλλά και προχωρημένους. Ομαλή συρόμενη βάση 15 cm της σκάλας παρέχει εξοικονόμηση χώρου και διευρύνει τα όρια της άσκησης. Το ορθοπεδικό μαξιλαράκι είναι κυρτό για άνεση και στήριξη. To <span class="fw-bold">Ladder Barrel</span> είναι ένα από τα γνωστά και διαχρονικά όργανα γυμναστικής της μεθόδου Pilates, που εμπνεύστηκε ο Joseph Pilates. Aποτελείται από ένα ξύλινο πολύζυγο από ξύλο οξιάς κι ένα βαρέλι ξύλινης κατασκευής. Το ορθοπεδικό μαξιλάρι υψηλής πυκνότητας από υλικό EVA παρέχει άνεση και στήριξη στις ασκήσεις. Το μεγάλο εύρος κίνησης του βαρελιού προσφέρει εξατομίκευση στην ανάγκες του ασκούμενου.
-										</p>
-										
-										<dl>
-											<dt class="mb-1 fs-5">ΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ:</dt>
-											<dd class="m-0">Αντιβακτηριδιακό δερμάτινο κάλυμμα</dd>
-											<dd class="m-0">Ορθοπεδικό μαξιλάρι στον κύλινδρο για άνεση</dd>
-											<dd class="m-0">Κρυφές βίδες για αισθητική εμφάνιση</dd>
-											<dd class="m-0 d-flex align-items-center">
-												<span class="badge bg-secondary-light text-main-dark rounded-pill me-1">4</span> Στηρίγματά ράγας
-											</dd>
-										</dl>
-										
-										<ul class="list-group mt-lg-3">
-											<li class="list-group-item w-100">
-												<p class="m-0 fw-bold text-center">
-													Κατεβάστε τον ψηφιακό κατάλογο
-												</p>
-											</li>
-											<li class="list-group-item w-100">
-												<a class="btn btn-main-dark w-100" href="assets/catalogs/ladder_barrel.pdf" download="Ladder Barrel">
-													<i class="icofont-ui-file"></i> Ladder Barrel
-												</a>
-											</li>
-										</ul>
-									</div>
-									
-									<div id="specifications-accessory-ladder-barrel" class="tab-pane fade" role="tabpanel">
-										<ul class="list-group">
-											<li class="list-group-item">
-												<h5 class="m-0 fw-bold">Διαστάσεις</h5>
-											</li>
-											<li class="list-group-item">Μήκος: 120 cm</li>
-										</ul>
-										
-										<ul class="list-group mt-3">
-											<li class="list-group-item">
-												<h5 class="m-0 fw-bold">Ladder</h5>
-											</li>
-											<li class="list-group-item">Πλάτος: 64 cm</li>
-											<li class="list-group-item">Ύψος: 94.5 cm</li>
-										</ul>
-										
-										<ul class="list-group mt-3">
-											<li class="list-group-item">
-												<h5 class="m-0 fw-bold">Barrel</h5>
-											</li>
-											<li class="list-group-item">Πλάτος: 64 cm</li>
-											<li class="list-group-item">Ύψος: 88 cm</li>
-										</ul>
-										
-										<ul class="list-group mt-3">
-											<li class="list-group-item">Βάρος: 40 kg</li>
-										</ul>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	
-	<!-- ----------------------- -->
-	<!-- ACCESSORY PILATES CHAIR -->
-	<!-- ----------------------- -->
-	<div id="accessoryPilatesChair" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
-		<div class="modal-dialog modal-fullscreen">
-			<div class="modal-content">
-				<div class="modal-header">
-					<h5 class="modal-title">Pilates Chair</h5>
-					<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-				</div>
-				<div class="modal-body">
-					<div class="container">
-						
-						<div class="row">
-							
-							<div class="col-md-5">
-								
-								<div class="swiper product-slides">
-									
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/1.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/2.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/3.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/4.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img
-												class="img-fluid rounded-3 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/5.webp"/>
-											<div class="spinner-border text-main-dark"></div>
-										</div>
-									</div>
-									
-									<div class="swiper-button-prev">
-										<i class="icofont-curved-left display-4 text-main-dark"></i>
-									</div>
-									
-									<div class="swiper-button-next">
-										<i class="icofont-curved-right display-4 text-main-dark"></i>
-									</div>
-									
-								</div>
-								
-								<div class="product-thumbs mt-3 mb-3 mb-md-0">
-									<div class="swiper-wrapper">
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/thumb1.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/thumb2.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/thumb3.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/thumb4.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-										<div class="swiper-slide">
-											<img 
-												class="rounded-1 swiper-lazy" 
-												data-src="assets/images/products/Accessories/pilates_chair/thumb5.webp" />
-												<div class="spinner-border spinner-border-sm text-main-dark"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						
-							<div class="col-md-7">
-								
-								<ul class="nav nav-tabs nav-justified" role="tablist">
-									<li class="nav-item me-2">
-										<button class="nav-link active" data-bs-target="#description-accessory-pilates-chair" data-bs-toggle="tab" type="button">
-											Περιγραφή
-										</button>
-									</li>
-									<li class="nav-item">
-										<button class="nav-link" data-bs-target="#specifications-accessory-pilates-chair" data-bs-toggle="tab" type="button">
-											Χαρακτηριστικά
-										</button>
-									</li>
-								</ul>
-								
-								<div class="tab-content mt-3">
-									<div id="description-accessory-pilates-chair" class="tab-pane fade show active" role="tabpanel">
-										<ul class="list-group list-group-horizontal-lg mb-2">
-											<li class="list-group-item flex-fill">
-												<i class="icofont-delivery-time"></i> Παράδοση: 20-30 Ημέρες
-											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-certificate"></i> Εγγύηση: 2 Χρόνια
-											</li>
-											<li class="list-group-item flex-fill">
-												<i class="icofont-box"></i> Βάρος: 34.5 kg
-											</li>
-										</ul>
-										
-										<p class="text-justify">
-											Η <span class="fw-bold">Pilates Chair</span> είναι χρήσιμη για όλους τους μύες του κορμιού, και βελτιώνει τη συνολική σταθεροποίηση και δύναμη του σώματος. Επίσης, χρησιμοποιείται για την αποκατάσταση της κακής στάσης και της μυϊκής ανισορροπίας από επαγγελματίες και αρχάριους. Ο συμπαγής, φορητός σχεδιασμός της, επιτρέπει τη χρήση της σε διάφορα μέρη. Η <span class="fw-bold">Pilates Chair</span> παρέχει ομαλές μεταβάσεις μεταξύ των ρυθμίσεων αντίστασης της. Οι ρυθμιζόμενες λαβές της έχουν αντιολισθητική επένδυση.
-										</p>
-										
-										<dl>
-											<dt class="mb-1 fs-5">ΠΕΡΙΛΑΜΒΑΝΟΝΤΑΙ:</dt>
-											<dd class="m-0">Αντιβακτηριδιακό δερμάτινο κάλυμμα</dd>
-											<dd class="m-0">Ορθοπεδικό μαξιλάρι για άνεση</dd>
-											<dd class="m-0 d-flex align-items-center">
-												<span class="badge bg-secondary-light text-main-dark rounded-pill me-1">2</span>Βραχίονες
-											</dd>
-											<dl class="m-0">
-												<dt class="m-0">Ελατήρια:</dt>
-												<dd class="m-0 d-flex align-items-center"><span class="badge bg-warning text-main-dark rounded-pill me-1">2</span>Κίτρινο</dd>
-												<dd class="m-0 d-flex align-items-center"><span class="badge bg-main-dark text-main-light rounded-pill me-1">2</span>Μαύρo</dd>
-											</dl>
-										</dl>
-										
-										<ul class="list-group mt-lg-3">
-											<li class="list-group-item w-100">
-												<p class="m-0 fw-bold text-center">
-													Κατεβάστε τον ψηφιακό κατάλογο
-												</p>
-											</li>
-											<li class="list-group-item w-100">
-												<a class="btn btn-main-dark w-100" href="assets/catalogs/pilates_chair.pdf" download="Pilates Chair">
-													<i class="icofont-ui-file"></i> Pilates Chair
-												</a>
-											</li>
-										</ul>
-									</div>
-									
-									<div id="specifications-accessory-pilates-chair" class="tab-pane fade" role="tabpanel">
-										<ul class="list-group">
-											<li class="list-group-item">
-												<h5 class="m-0 fw-bold">Πλαίσιο</h5>
-											</li>
-											<li class="list-group-item">Πλάτος: 64 cm</li>
-											<li class="list-group-item">Μήκος: 76 cm</li>
-											<li class="list-group-item">Ύψος: 68 cm</li>
-										</ul>
-										
-										<ul class="list-group mt-3">
-											<li class="list-group-item">
-												<h5 class="m-0 fw-bold">Κάθισμα</h5>
-											</li>
-											<li class="list-group-item">Πλάτος: 54 cm</li>
-											<li class="list-group-item">Μήκος: 34 cm</li>
-											<li class="list-group-item">Ύψος: 5 cm</li>
-										</ul>
-										
-										<ul class="list-group mt-3">
-											<li class="list-group-item">Βάρος: 34.5 kg</li>
-										</ul>
-									</div>
-								</div>
-								
-							</div>
-						</div>
-					
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+	</div>-->
 	
 	<!-- ----------------------- -->
 	<!-- ACCESSORY EXERCISE POLE -->
 	<!-- ----------------------- -->
-	<div id="accessoryPilatesPole" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
+	<!--<div id="accessoryPilatesPole" class="modal fade product-info-modal" tabindex="-1" aria-hidden="true">
 		<div class="modal-dialog modal-fullscreen">
 			<div class="modal-content">
 				<div class="modal-header">
@@ -4943,20 +5101,25 @@
 				</div>
 			</div>
 		</div>
-	</div>
+	</div>-->
 	
 	<!-- TOAST NOTIFICATIONS -->
 	<div class="position-fixed top-50 start-50 translate-middle">
 		<div class="toast toast-error" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="6000">
 			<div class="toast-header pb-0">
-				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
+				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark">
+					<i class="icofont-info-square"></i> Ειδοποίηση
+				</h5>
 				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
 			<div class="toast-body">
-				<p class="text-center mb-1">Υπάρxουν σφάλματα στα ακόλουθα πεδία:</p>
+				<p class="text-center mb-1">
+					Υπάρxουν σφάλματα στα ακόλουθα πεδία:
+				</p>
 				<p class="errors m-0"></p>
-				<p class="m-0">Αριθμός εσφαλμένων πεδίων: <span class="error-count"></span></p>
-				<small class="time d-block fw-bold text-end"></small>
+				<p class="m-0 mt-2">
+					Αριθμός εσφαλμένων πεδίων: <span class="error-count"></span>
+				</p>
 			</div>
 		</div>
 	</div>
@@ -4964,12 +5127,13 @@
 	<div class="position-fixed top-50 start-50 translate-middle">
 		<div class="toast toast-success" role="alert" aria-live="assertive" aria-atomic="true" data-bs-delay="6000">
 			<div class="toast-header pb-0">
-				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark"><i class="icofont-info-square"></i> Ειδοποίηση</h5>
+				<h5 class="fs-5 fw-bold m-0 me-auto text-main-dark">
+					<i class="icofont-info-square"></i> Ειδοποίηση
+				</h5>
 				<button type="button" class="btn-close opacity-100" data-bs-dismiss="toast" aria-label="Close"></button>
 			</div>
 			<div class="toast-body">
 				<p class="text-center mb-1"><i class="icofont-send-mail"></i> H αποστολή ήταν επιτυχής</p>
-				<small class="time d-block fw-bold text-end"></small>
 			</div>
 		</div>
 	</div>
